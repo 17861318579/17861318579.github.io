@@ -22,7 +22,7 @@ border-collapse: collapse;
 <table class="mytable" bordercolor="#EEEEE6" border="1">
   <tr>
     <th></th>
-    <th><br> <h2 align="center">Pyramid Maps Attention-based Convolutional Neural Network for OCTA Image Segmentation in Diabetic Retinopathy
+    <th><br> <h2 align="center">Dual-Path Attention based Network for Fundus Segmentation on OCT-Angiography
 </h2></th>
 	<td></td>
   </tr>
@@ -30,17 +30,17 @@ border-collapse: collapse;
   <tr>
     <td></td>
     <td ><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
-<br>  Pyramid maps Attention-based Convolutional neural Network (PACN) model for segmentation  2022.9.6.,
+<br>  Dual-Path Attention Network (DPANet) model for segmentation  2023.7.5.,
 <br>  Permission to use copy, or modify this dataset, tool and codes for educational and research purposes.
 <br>  E-mail : mafei0603（at）163.com ; 17861318579（at）163.com 
-<br>  Homepage : https://17861318579.github.io/LPBC
+<br>  Homepage : https://17861318579.github.io/LOID
 <br>--------------------------------------------------------------------------------------------------------------------------------------------<br><br> 
 <b>1. Dataset Description </b>
 <br> 
 <p style=text-align:justify; text-justify:inter-ideograph;> 
-Our dataset is based on the OCTA technique, by using the SS-OCT system to obtain the eye images of 106 diabetic patients. All DR images are annotated by experienced doctors. To protect the privacy of patients, the information of DR images is anonymous during the construction of the DR dataset. According to the characteristics of OCTA images, we can check out the blood vessels in the retinal and choroid layers based on OCTA images. Retinal vascular layers are not easily distinguished due to the appearance of complex structures in ocular tissue features. Thus, we can determine the boundaries of the retinal layers with the inner limiting membrane (ILM), nerve fiber layer (NFL), ganglion cell layer (GCL), inner plump layer (IPL), inner nuclear layer (INL), outer plump layer (OPL), retinal pigment epithelium (NFL), and Bruch's membrane (BM). However, the regions of DR lesions in our study often appear in the superficial layer of retina. To segment DR lesions clearly, we select the retinal layer, the inner retinal layer and the superficial blood vessel layer to segment DR lesions. The data-set is captured by wide-field OCTA(WF-OCTA). The DR dataset contains pixel-level labels and image-level labels of 1024 $\times$ 1024 pixels. 
-<br>  This dataset will be soon released publicly. The ground-truth samples were manually made by our experts, which are aided with our self-developed software. 
-<br>
+Our constructed Lesion segmentation OCTA Image Dataset (LOID) contains two subsets, named LOID-PDR (Proliferative diabetic retinopathy) and LOID-OD (optic disc), which were acquired by a SS-OCT (swept-source optical coherence tomography) system (VG200D, SVision Imaging, Ltd., Luoyang, Henan, China) and based on DR database. The lesion annotations of OCTA images in the LOID dataset are based on the pixel level. 
+<br>  DR photos are captured by a 12 mm * 12 mm SS-OCT centered on the fovea in 288 diabetic patients.  We selected 50 OCTA images with PDR.  To be private, we delete the information of patients, such as sex, name and age.  The symptoms of PDR mainly include neovascularization and pre-retinal hemorrhage.  The original images are the same for the two sub-sets.  PDR lesions are annotated in the LOID-PDR dataset.  The optic discs are labeled in the LOID-OD dataset.
+<br>  All DR images are labeled by the ophthalmologist. All the DR lesions in our constituency belonged to PDR. The ophthalmologist labeled the PDR lesion annotations and the retinal optic discs in the LOID dataset, respectively.
 <br>
 </p>
 </td>
@@ -64,9 +64,9 @@ Our dataset is based on the OCTA technique, by using the SS-OCT system to obtain
 <br><br>
 2.2 The ground-truth tool developed by our team can be downloaded with URL：<a href="MakeGroundtruthTool_v1.rar">MakeGroundtruthTool_v1.0 (windows desktop app at .net 5.0)</a>.This software is a specialized tool to make the ground truth from original samples under complex scene. The ground-truth images can be obtained by this tool with the help in Fig.2, which is developed by our team. This application is run under <a href="https://download.visualstudio.microsoft.com/download/pr/0393fb31-b54e-4325-ba45-2b682fd6a43d/90036afbb9671be618554bf8fae3f66f/windowsdesktop-runtime-5.0.11-win-x86.exe">.net 5.0 runtime(win-x86)</a> with windows 10 (x86 or x64).
 <br><br>
-2.3 The <b> key code of our approach (PACN) </b>for demo can be downloaded <a href="Demo_LPBC.rar">here</a> (Pytorch).<br>    
+2.3 The <b> key code of our approach (DPANet) </b>for demo can be downloaded <a href="https://17861318579.github.io/LOID/DPA_Att_Module">here</a> (Pytorch).<br>    
 <br>
-2.4 The code of U-Net for demo can be downloaded <a href="https://github.com/Andy-zhujunwen/U-Net-ZOO">here</a>  (Pytorch).
+2.4 The code of U-Net for demo can be downloaded <a href="https://17861318579.github.io/LOID/">here</a>  (Pytorch).
 <br>
 <br>
 </td>
@@ -78,12 +78,15 @@ Our dataset is based on the OCTA technique, by using the SS-OCT system to obtain
     <td></td>
 	<td>
  <br><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
-<h4 align="center">FIGURE 1 The thumbnail view of the Dataset for nonperfusion areas</h4> <br>
+<h4 align="center">FIGURE 1 The thumbnail view of the LOID Dataset</h4> <br>
 <b>The Original Image </b>
-<img src="image_4_5.jpg" width="800" />
+<img src="image.jpg" width="800" />
 <br>
-<b>The Ground-truth </b>
-<img src="label_4_5.jpg" width="800" />
+<b>The Ground-truth of PDR</b>
+<img src="label1.jpg" width="800" />
+<br>
+<b>The Ground-truth of OD</b>
+<img src="label2.jpg" width="800" />
 <br>
 <br><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
 <h4 align="center">FIGURE 2 The help for the ground-truth tool(MakeGT, it can make GT for several types of scenes.)</h4> <br>
