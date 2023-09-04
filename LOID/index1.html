@@ -1,0 +1,103 @@
+<html>
+<head>
+<style type="text/css">
+body
+{
+	font-family: Arial;
+}
+</style>
+</head>
+
+<body>
+<style type="text/css">
+.mytable{
+width:800px;
+height:100px;
+margin:0 auto;
+border-collapse: collapse;
+
+}
+</style>
+
+<table class="mytable" bordercolor="#EEEEE6" border="1">
+  <tr>
+    <th></th>
+    <th><br> <h2 align="center">Dual-Path Attention based Network for Fundus Segmentation on OCT-Angiography
+</h2></th>
+	<td></td>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td ><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
+<br>  Dual-Path Attention Network (DPANet) model for segmentation  2023.7.5.,
+<br>  Permission to use copy, or modify this dataset, tool and codes for educational and research purposes.
+<br>  E-mail : mafei0603（at）163.com ; 17861318579（at）163.com 
+<br>  Homepage : https://17861318579.github.io/LOID
+<br>--------------------------------------------------------------------------------------------------------------------------------------------<br><br> 
+<b>1. Dataset Description </b>
+<br> 
+<p style=text-align:justify; text-justify:inter-ideograph;> 
+Our constructed OpticDisc segmentation OCTA Image Dataset (ODOID), which was acquired by a SS-OCT (swept-source optical coherence tomography) system (VG200D, SVision Imaging, Ltd., Luoyang, Henan, China). 
+<br>  Photos are captured by a 12 mm × 12 mm SS-OCT centered on the fovea in 288 Normal human eyes. We selected 50 OCTA images from these. To be private, we delete the information of volunteers, such as sex, name and age. The optic discs are labeled in the ODOID dataset.
+<br>  All images are labeled by the ophthalmologist. The ophthalmologist labeled the retinal optic discs in the ODOID dataset.
+<br>
+</p>
+</td>
+	<td></td>
+  </tr>
+   <tr>
+    <td></td>
+	<td>
+ 
+</td>
+    <td>
+	
+</td>
+  </tr>
+   <tr> _ _<tr>
+    <td></td><td></td>
+	
+    <td><b>2。应用工具及代码下载</b><td><b>2. Application Tool and code Download </b>
+<<br><br>>
+2.1 我们团队开发的<font color="#FF0000">制作ground-truth工具</font>下载地址：<a href="MakeGroundTruth_v1.01.zip">MakeGroundtruthTool_v1.01（windows桌面应用程序位于.netframework2.0)</a>。该软件是一个专门用于在复杂场景下从原始样本中获取groundtruth的工具。借助我们团队开发的图2所示的工具，可以获取地面实况图像。此应用程序在< font color = " #FF0000" >我们团队开发的ground - truth制作工具</font>可通过以下网址下载：<a href = "MakeGroundTruth_v1.01.zip" > MakeGroundtruthTool_v1.01 (windows桌面应用程序位于. netframework2.0) </a> 。该软件是一个专门用于在复杂场景下从原始样本中获取groundtruth的工具。借助我们团队开发的图2所示的工具，可以获取地面实况图像。该应用程序在< a href =下运行对于 Windows 10（x86 或 x64），“ https://download.microsoft.com/download/9/8/6/98610406-c2b7-45a4-bdc3-9db1b1c5f7e2/NetFx20SP1_x64.exe ” > .netframework2.0(win-x64)</a> 。
+<br > <br> _ _
+2.2 我们团队开发的ground-truth工具可以通过以下网址下载：<a href="MakeGroundtruthTool_v1.rar">MakeGroundtruthTool_v1.0（.net 5.0的windows桌面应用程序）</a>。该软件是专门用于从原始样本中获取复杂场景下的真实情况。借助我们团队开发的图2所示的工具，可以获取地面实况图像。此应用程序在 <a href="https://download.visualstudio.microsoft.com/download/pr/0393fb31-b54e-4325-ba45-2b682 fd6a43d/90036afbb9671be618554bf8fae3f66f/windowsdesktop-runtime-5.0.11-win-x86下运行.exe">.net 5.0 运行时(win-x86)</a> 与 Windows 10（x86 或 x64）。<a href="MakeGroundtruthTool_v1.rar">MakeGroundtruthTool_v1.0 (windows desktop app at .net 5.0)</a>.This software is a specialized tool to make the ground truth from original samples under complex scene. The ground-truth images can be obtained by this tool with the help in Fig.2, which is developed by our team. This application is run under <a href="https://download.visualstudio.microsoft.com/download/pr/0393fb31-b54e-4325-ba45-2b682fd6a43d/90036afbb9671be618554bf8fae3f66f/windowsdesktop-runtime-5.0.11-win-x86.exe"></a> with windows 10 (x86 or x64).
+<<br><br>>
+2.3 我们的方法（DPANet）的<b>关键代码</b>用于演示可以在<a href="https://17861318579.github.io/LOID/DPA_Att_Module.py">此处</a>下载（ Pytorch）。<br>    <b> key code of our approach (DPANet) </b>for demo can be downloaded <a href="https://17861318579.github.io/LOID/DPA_Att_Module.py">here</a> (Pytorch).<br>    
+<<br>>
+2.4 U-Net 的 demo 代码可以在<a href="https://17861318579.github.io/LOID/">这里</a>下载（Pytorch）。<a href="https://17861318579.github.io/LOID/">here</a>  (Pytorch).
+<<br>>
+<<br>>
+</</td>>
+  <td><td>
+	 
+	</td></td>
+	</tr></tr>
+	 <tr><tr> _ _
+    <td></td>
+	<td>
+ <br><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
+<h4 align="center">FIGURE 1 The thumbnail view of the LOID Dataset</h4> <br>
+<b>The Original Image </b>
+<img src="image.jpg" width="800" />
+<br>
+<b>The Ground-truth of OD</b>
+<img src="label.png" width="800" />
+<br>
+<br><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
+<h4 align="center">FIGURE 2 The help for the ground-truth tool(MakeGT, it can make GT for several types of scenes.)</h4> <br>
+<img src="Help1.jpg"  width="800" />
+<br>
+<img src="help.png"  width="800" />
+<br>
+</td>
+    <td>
+	<a href="https://clustrmaps.com/site/1bobi"  title="Visit tracker"><img src="//www.clustrmaps.com/map_v2.png?d=QoRYI9AoBD5uM3C9pbBm79T2pX0DSdkJY0iUGEq46eY&cl=ffffff" width="1" height="1" /></a>
+</td>
+  </tr>
+</table>
+ 
+
+</body>
+  </</html>>
