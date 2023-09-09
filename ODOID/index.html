@@ -33,14 +33,14 @@ border-collapse: collapse;
 <br>  Dual-Path Attention Network (DPANet) model for segmentation  2023.7.5.,
 <br>  Permission to use copy, or modify this dataset, tool and codes for educational and research purposes.
 <br>  E-mail : mafei0603（at）163.com ; 17861318579（at）163.com 
-<br>  Homepage : https://17861318579.github.io/LOID
+<br>  Homepage : https://17861318579.github.io/ODOID
 <br>--------------------------------------------------------------------------------------------------------------------------------------------<br><br> 
 <b>1. Dataset Description </b>
 <br> 
 <p style=text-align:justify; text-justify:inter-ideograph;> 
-Our constructed Lesion segmentation OCTA Image Dataset (LOID) contains two subsets, named LOID-PDR (Proliferative diabetic retinopathy) and LOID-OD (optic disc), which were acquired by a SS-OCT (swept-source optical coherence tomography) system (VG200D, SVision Imaging, Ltd., Luoyang, Henan, China) and based on DR database. The lesion annotations of OCTA images in the LOID dataset are based on the pixel level. 
-<br>  DR photos are captured by a 12 mm × 12 mm SS-OCT centered on the fovea in 288 diabetic patients.  We selected 50 OCTA images with PDR.  To be private, we delete the information of patients, such as sex, name and age.  The symptoms of PDR mainly include neovascularization and pre-retinal hemorrhage.  The original images are the same for the two sub-sets.  PDR lesions are annotated in the LOID-PDR dataset.  The optic discs are labeled in the LOID-OD dataset.
-<br>  All DR images are labeled by the ophthalmologist. All the DR lesions in our constituency belonged to PDR. The ophthalmologist labeled the PDR lesion annotations and the retinal optic discs in the LOID dataset, respectively.
+Our constructed OpticDisc segmentation OCTA Image Dataset (ODOID), which was acquired by a SS-OCT (swept-source optical coherence tomography) system (VG200D, SVision Imaging, Ltd., Luoyang, Henan, China). 
+<br>  Photos are captured by a 12 mm × 12 mm SS-OCT centered on the fovea in 288 Normal human eyes. We selected 50 OCTA images from these. To be private, we delete the information of volunteers, such as sex, name and age. The optic discs are labeled in the ODOID dataset.
+<br>  All images are labeled by the ophthalmologist. The ophthalmologist labeled the retinal optic discs in the ODOID dataset.
 <br>
 </p>
 </td>
@@ -78,15 +78,12 @@ Our constructed Lesion segmentation OCTA Image Dataset (LOID) contains two subse
     <td></td>
 	<td>
  <br><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
-<h4 align="center">FIGURE 1 The thumbnail view of the LOID Dataset</h4> <br>
+<h4 align="center">FIGURE 1 The thumbnail view of the ODOID Dataset</h4> <br>
 <b>The Original Image </b>
-<img src="image.png" width="800" />
-<br>
-<b>The Ground-truth of PDR</b>
-<img src="label1.png" width="800" />
+<img src="image.jpg" width="800" />
 <br>
 <b>The Ground-truth of OD</b>
-<img src="label2.png" width="800" />
+<img src="label1.png" width="800" />
 <br>
 <br><br>--------------------------------------------------------------------------------------------------------------------------------------------<br>
 <h4 align="center">FIGURE 2 The help for the ground-truth tool(MakeGT, it can make GT for several types of scenes.)</h4> <br>
